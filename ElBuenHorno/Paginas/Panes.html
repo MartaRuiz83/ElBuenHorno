@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Pan - El Buen Horno</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/panes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header class="header-section">
+        <img src="../IMGS/IMGS WEB/Logo4 sin.png" alt="Imagen de cabecera" class="header-image">
+    </header>
+
+    <div class="container">
+        <h1>Nuestros Panes</h1>
+        <p class="text-center">Explora nuestra selección de panes frescos y tradicionales.</p>
+        
+        <div class="product-grid">
+            <!-- Pan Tradicional -->
+            <div class="product-card" data-product-id="1">
+                <img src="../IMGS/IMGS WEB/pantradicional.jpg" alt="Pan Tradicional" class="product-image">
+                <h3>Pan Tradicional</h3>
+                <p class="price">€1.50</p>
+                <button class="btn btn-success add-to-cart">Añadir al Carrito</button>
+                <button class="btn btn-warning add-to-favorites"><i class="fas fa-heart"></i></button>
+            </div>
+            <!-- Baguette Francesa -->
+            <div class="product-card" data-product-id="2">
+                <img src="../IMGS/IMGS WEB/baguettes.jpg" alt="Baguette Francesa" class="product-image">
+                <h3>Baguette Francesa</h3>
+                <p class="price">€2.00</p>
+                <button class="btn btn-success add-to-cart">Añadir al Carrito</button>
+                <button class="btn btn-warning add-to-favorites"><i class="fas fa-heart"></i></button>
+            </div>
+            <!-- Pan Integral -->
+            <div class="product-card" data-product-id="3">
+                <img src="../IMGS/IMGS WEB/panintegral.webp" alt="Pan Integral" class="product-image">
+                <h3>Pan Integral</h3>
+                <p class="price">€2.50</p>
+                <button class="btn btn-success add-to-cart">Añadir al Carrito</button>
+                <button class="btn btn-warning add-to-favorites"><i class="fas fa-heart"></i></button>
+            </div>
+            <!-- Pan de Centeno -->
+            <div class="product-card" data-product-id="4">
+                <img src="../IMGS/IMGS WEB/pancenteno.jpg" alt="Pan de Centeno" class="product-image">
+                <h3>Pan de Centeno</h3>
+                <p class="price">€3.00</p>
+                <button class="btn btn-success add-to-cart">Añadir al Carrito</button>
+                <button class="btn btn-warning add-to-favorites"><i class="fas fa-heart"></i></button>
+            </div>
+            <!-- Pan de Avena -->
+            <div class="product-card" data-product-id="5">
+                <img src="../IMGS/IMGS WEB/panavena.jpg" alt="Pan de Avena" class="product-image">
+                <h3>Pan de Avena</h3>
+                <p class="price">€2.80</p>
+                <button class="btn btn-success add-to-cart">Añadir al Carrito</button>
+                <button class="btn btn-warning add-to-favorites"><i class="fas fa-heart"></i></button>
+            </div>
+            <!-- Pan Rústico -->
+            <div class="product-card" data-product-id="6">
+                <img src="../IMGS/IMGS WEB/panrustico.jpg" alt="Pan Rústico" class="product-image">
+                <h3>Pan Rústico</h3>
+                <p class="price">€3.20</p>
+                <button class="btn btn-success add-to-cart">Añadir al Carrito</button>
+                <button class="btn btn-warning add-to-favorites"><i class="fas fa-heart"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-home">
+            <a href="../index.html"><i class="fas fa-home"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const favorites = [];
+
+            document.querySelectorAll(".add-to-favorites").forEach(button => {
+                button.addEventListener("click", event => {
+                    const button = event.target.closest(".add-to-favorites");
+                    const productCard = event.target.closest(".product-card");
+                    const productId = productCard.dataset.productId;
+
+                    if (!favorites.includes(productId)) {
+                        favorites.push(productId);
+                        button.classList.add("favorited");
+                    } else {
+                        favorites.splice(favorites.indexOf(productId), 1);
+                        button.classList.remove("favorited");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

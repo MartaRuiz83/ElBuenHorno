@@ -1,0 +1,115 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.map-header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.map-header h1 {
+    font-size: 2em;
+    margin: 0;
+    font-weight: normal;
+}
+
+/* Contenedor del mapa */
+.map-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+.map-container {
+    width: 80%;
+    max-width: 800px;
+    border: 5px solid #e5a00d; 
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+/* Estilo adicional para pantalla pequeña */
+@media (max-width: 768px) {
+    .map-container {
+        width: 90%;
+        border-width: 4px;
+    }
+
+    .map-header h1 {
+        font-size: 1.5em;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #4b2c20; 
+    color: #fff;
+    padding: 20px 40px;
+    text-align: left;
+    position: relative; 
+    margin-top: 145px;
+    
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.footer-info h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.footer-info p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.footer-social {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #d79b00; 
+}
+
+.footer-social i {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

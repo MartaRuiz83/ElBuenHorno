@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../CSS/contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <!-- Cabecera con imagen -->
+    <header class="header-section">
+        <img src="../IMGS/IMGS WEB/Logo4 sin.png" alt="Imagen de cabecera" class="header-image">
+        <h2>¿Tienes alguna duda?</h2>
+        <h3>Contacta con nosotros</h3>
+    </header>
+
+    <!--Formulario de contacto-->
+    <section class="contact-section">
+        <div class="container">
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea class="form-control" id="mensaje" name="mensaje" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-orange mt-3">Enviar</button>
+            </form>
+            <p id="success-message" style="display:none; color: green;">¡Formulario enviado con éxito!</p>
+        </div>
+    </section>
+
+    <!-- Icono de Home -->
+    <footer>
+        <div class="footer-home">
+            <a href="../index.html"><i class="fas fa-home"></i></a>
+        </div>
+    </footer>
+
+    <!-- JavaScript para prevenir el envío real -->
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío del formulario
+            document.getElementById('success-message').style.display = 'block'; // Muestra el mensaje de éxito
+            this.reset(); // Opcional: reinicia el formulario
+        });
+    </script>
+
+</body>
+</html>
