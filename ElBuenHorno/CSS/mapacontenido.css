@@ -8,7 +8,7 @@ body {
 /* Cabecera */
 .header-section {
     text-align: center;    
-    background-color:#f7f7f7;
+    background-color: #f7f7f7;
     margin-bottom: -60px;
 }
 
@@ -21,7 +21,7 @@ body {
 .header-section h2 {
     font-size: 2em;
     margin-top: 10px;
-    color: #333;
+    color: #333; /* Color oscuro para contraste */
 }
 
 .container {
@@ -32,7 +32,7 @@ body {
 
 h1 {
     font-size: 2.5rem;
-    color: #333;
+    color: #333; /* Oscurecido para mejor contraste */
     text-align: center;
     margin-bottom: 20px;
 }
@@ -44,9 +44,9 @@ h1 {
 }
 
 .grid-item {
-    background-color: #fff;
+    background-color: #ffffff; /* Fondo blanco para claridad */
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc; /* Borde ligeramente más oscuro */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -59,34 +59,38 @@ h1 {
 }
 
 .grid-item a {
-    color: #d79b00;
+    color: #b86b00; /* Naranja oscuro para contraste */
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
 }
 
 .grid-item a:hover {
-    color: #b68500;
+    color: #995500; /* Más oscuro al pasar el cursor */
     text-decoration: underline;
 }
 
-/* Estilos para el icono de Home */
+.grid-item p {
+    color: #555; /* Gris oscuro para mejor contraste */
+    font-size: 1rem;
+    margin-top: 10px;
+}
 
+/* Estilos para el icono de Home */
 .footer-home {
     display: flex;
     justify-content: center;
     padding: 10px;
     margin-top: -3%;
-    
 }
 
 .footer-home a {
-    color: #e5a00d;
+    color: #b86b00; /* Naranja oscuro para contraste */
     font-size: 3em;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .footer-home a:hover {
-    color: #d48e0c;
+    color: #995500; /* Más oscuro al pasar el cursor */
 }

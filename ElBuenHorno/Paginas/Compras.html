@@ -112,6 +112,21 @@
             alert("El pago ha sido cancelado.");
         }
     });
+
+    document.querySelectorAll('.quantity-input').forEach(input => {
+    input.addEventListener('input', function () {
+        const productImage = this.closest('.cart-item').querySelector('img'); // Imagen del producto
+
+        // Agregar clase de animación temporalmente
+        productImage.classList.add('jump-animation');
+
+        // Eliminar la clase después de la animación (para que pueda repetirse)
+        setTimeout(() => {
+            productImage.classList.remove('jump-animation');
+        }, 500); // Duración de la animación
+    });
+});
+
 </script>
 
 </body>

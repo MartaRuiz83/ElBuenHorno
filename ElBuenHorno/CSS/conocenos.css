@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Cabecera */
+.header-section {
+    text-align: center;    
+    background-color: #f7f7f7;
+    margin-bottom: -100px;
+}
+
+.header-image {
+    max-width: 15%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.header-section h2 {
+    font-size: 2em;
+    margin-top: 10px;
+    color: #333; /* Color oscuro para contraste */
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333; /* Oscurecido para mejor contraste */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: #ffffff; /* Fondo blanco para claridad */
+    padding: 20px;
+    border: 1px solid #ccc; /* Borde ligeramente más oscuro */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.grid-item a {
+    color: #b86b00; /* Naranja oscuro para contraste */
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.grid-item a:hover {
+    color: #995500; /* Más oscuro al pasar el cursor */
+    text-decoration: underline;
+}
+
+.grid-item p {
+    color: #555; /* Gris oscuro para mejor contraste */
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Estilos para el icono de Home */
+.footer-home {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-top: -7%;
+}
+
+.footer-home a {
+    color: #b86b00; /* Naranja oscuro para contraste */
+    font-size: 3em;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-home a:hover {
+    color: #995500; /* Más oscuro al pasar el cursor */
+}

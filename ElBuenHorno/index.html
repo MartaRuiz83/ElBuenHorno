@@ -21,6 +21,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="Paginas/Conocenos.html">Conócenos</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Menú</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Pedidos</a></li>
                 <li class="nav-item"><a class="nav-link" href="Paginas/MapaContenido.html">Mapa Web</a></li>
@@ -37,7 +38,11 @@
     <!-- Header Banner con imagen de fondo -->
     <section class="header-banner">
         <a class="logo" href="#">
-            <img src="IMGS/IMGS WEB/Logo4 sin.png" alt="Logo El Buen Horno" aria-label="Logo de El Buen Horno">
+            <picture>
+                <source srcset="IMGS/TinyPNG/Logo4-sin.webp" type="image/webp">
+                <source srcset="IMGS/TinyPNG/Logo4-sin.jpg" type="image/jpeg">
+                <img src="IMGS/TinyPNG/Logo4-sin.jpg" alt="Logo El Buen Horno" aria-label="Logo de El Buen Horno">
+            </picture>
         </a>
         <div class="banner-content">
             <h1>El sabor de lo auténtico</h1>
@@ -47,6 +52,30 @@
 
     <!-- Línea de separación -->
     <div class="separator-line"></div>
+
+  <!-- Reproductor de Audio Fijo -->
+<section class="audio-player-container">
+    <div class="audio-player">
+        <div class="audio-header">
+            <i class="fas fa-music audio-icon"></i>
+            <h3>Bienvenida a El Buen Horno</h3>
+        </div>
+        <audio id="audioPlayer" controls>
+            <source src="AUDIO/Bienvenidos.mp3" type="audio/mpeg">
+            <source src="AUDIO/Bienvenidos.mp3" type="audio/ogg">
+            Tu navegador no soporta el audio.  
+            <a href="AUDIO/Bienvenidos.mp3" class="audio-download">Descargar audio</a>
+        </audio>
+        <button class="toggle-transcription-btn" onclick="toggleTranscription()">Ver transcripción</button>
+        <p class="audio-transcription" id="transcription">
+            <strong>Transcripción:</strong> ¡Bienvenidos a El Buen Horno! Aquí encontrarás el mejor pan artesanal,
+            elaborado con ingredientes frescos y recetas tradicionales. Disfruta de nuestros productos recién
+            horneados, perfectos para cada ocasión. ¡Gracias por visitarnos!
+        </p>
+    </div>
+</section>
+
+
 
     <!-- Nueva sección de contenido -->
     <section class="product-section">
@@ -63,14 +92,29 @@
         <div class="featured-cards">
             <!-- Tarjeta 1 -->
             <div class="card">
-                <img src="IMGS/IMGS WEB/Portada 4.jpg" alt="Pan rústico" aria-label="Imagen de pan rústico">
-                <p>Disfruta de nuestros panes rústicos, elaborados con ingredientes frescos y técnicas tradicionales para un sabor auténtico y único.</p>
-                <a href="Paginas/Panes.html" class="btn btn-orange" aria-label="Ver más detalles sobre pan rústico">VER MÁS</a>
-            </div>            
+                <picture>
+                    <source srcset="IMGS/TinyPNG/Portada4.webp" type="image/webp">
+                    <source srcset="IMGS/TinyPNG/Portada4.jpg" type="image/jpeg">
+                    <img src="IMGS/TinyPNG/Portada4.jpg" alt="Pan rústico" aria-label="Imagen de pan rústico"
+                        loading="lazy">
+                </picture>
+                <p>Disfruta de nuestros panes rústicos, elaborados con ingredientes frescos y técnicas tradicionales
+                    para un sabor auténtico y único.</p>
+                <a href="Paginas/Panes.html" class="btn btn-orange" aria-label="Ver más detalles sobre pan rústico">VER
+                    MÁS</a>
+            </div>
 
             <!-- Tarjeta 2 -->
             <div class="card">
-                <img src="IMGS/IMGS WEB/Pasteles2.jpg" alt="Pastel" aria-label="Imagen de pastel">
+                <picture>
+                    <source
+                        srcset="IMGS/TinyPNG/Pasteles2.webp 480w, IMGS/TinyPNG/Pasteles2.webp 768w, IMGS/TinyPNG/Pasteles2.webp 1200w"
+                        sizes="(max-width: 600px) 480px, (max-width: 1024px) 768px, 1200px" type="image/webp">
+                    <source
+                        srcset="IMGS/TinyPNG/Pasteles2.jpg 480w, IMGS/TinyPNG/Pasteles2.jpg 768w, IMGS/TinyPNG/Pasteles2.jpg 1200w"
+                        sizes="(max-width: 600px) 480px, (max-width: 1024px) 768px, 1200px" type="image/jpeg">
+                    <img src="IMGS/TinyPNG/Pasteles2.jpg" alt="Pastel" aria-label="Imagen de pastel" loading="lazy">
+                </picture>
                 <p>Descubre nuestros pasteles irresistibles, hechos a mano con la mejor calidad, perfectos para
                     cualquier ocasión especial.</p>
                 <button class="btn btn-orange" aria-label="Ver más detalles sobre pasteles">VER MÁS</button>
@@ -78,13 +122,71 @@
 
             <!-- Tarjeta 3 -->
             <div class="card">
-                <img src="IMGS/IMGS WEB/Ofertas6.jpg" alt="Pan en oferta" aria-label="Imagen de pan en oferta">
+                <picture>
+                    <source srcset="IMGS/TinyPNG/Ofertas6.jpg" type="image/webp">
+                    <source srcset="IMGS/TinyPNG/Ofertas6.webp" type="image/jpeg">
+                    <img src="IMGS/TinyPNG/Ofertas6.jpg" alt="Pan en oferta" aria-label="Imagen de pan en oferta"
+                        loading="lazy">
+                </picture>
                 <p>Aprovecha nuestras ofertas especiales y promociones semanales. ¡Sabores increíbles a precios
                     irresistibles!</p>
                 <button class="btn btn-orange" aria-label="Ver más detalles sobre ofertas de pan">VER MÁS</button>
             </div>
         </div>
     </section>
+
+    <!-- Sección de Testimonios -->
+<section class="testimonials-section">
+    <div class="container">
+        <h2>Lo que dicen nuestros clientes</h2>
+        <div class="testimonials">
+            <!-- Testimonio 1 -->
+            <div class="testimonial">
+                <h3 class="stars">⭐⭐⭐⭐⭐</h3>
+                <p>"El Buen Horno es, sin duda, mi panadería favorita. Desde que probé su pan rústico, 
+                    no he querido comprar en otro sitio. Se nota la calidad de los ingredientes y el cariño con el que preparan cada producto. 
+                    Además, la atención es excelente, siempre te reciben con una sonrisa y te ayudan a elegir lo mejor según tu gusto. 
+                    ¡Sus croissants de mantequilla son una delicia! Totalmente recomendado."</p>
+                <strong>- Carlos Rodríguez</strong>
+            </div>
+
+            <!-- Testimonio 2 -->
+            <div class="testimonial">
+                <h3 class="stars">⭐☆☆☆☆</h3>
+                <p>"Fui con muchas expectativas después de leer tantas opiniones positivas, pero mi experiencia no fue la mejor. 
+                    El pan que compré estaba demasiado duro y parecía que llevaba varias horas en la vitrina. Además, el servicio fue algo lento, 
+                    tardaron en atenderme aunque no había mucha gente. Creo que podrían mejorar en la frescura de los productos y en la rapidez 
+                    del servicio."</p>
+                <strong>- María Fernández</strong>
+            </div>
+
+            <!-- Testimonio 3 -->
+            <div class="testimonial">
+                <h3 class="stars">⭐⭐⭐☆☆</h3>
+                <p>"El Buen Horno tiene productos de buena calidad, pero hay cosas que se pueden mejorar. Me encantan sus tartas y bollería, 
+                    pero en algunas ocasiones me ha tocado esperar bastante en la fila, sobre todo los fines de semana. Además, 
+                    los precios son un poco más altos que en otras panaderías de la zona. Sin embargo, si buscas un pan con sabor auténtico y 
+                    buenos ingredientes, merece la pena probarlo."</p>
+                <strong>- Laura Gómez</strong>
+            </div>
+        </div>
+
+        <!-- Reproductor de Audio con opciones -->
+        <div class="testimonial-audio-player">
+            <h3>Escucha lo que opinan nuestros clientes</h3>
+            <audio id="testimonialAudio" controls>
+                <source src="AUDIO/Testimonio1.mp3" type="audio/mpeg">
+                Tu navegador no soporta el audio.
+            </audio>
+            <div class="audio-buttons">
+                <button onclick="changeAudio('AUDIO/Testimonio1.mp3')">Testimonio 1</button>
+                <button onclick="changeAudio('AUDIO/Testimonio2.mp3')">Testimonio 2</button>
+                <button onclick="changeAudio('AUDIO/Testimonio3.mp3')">Testimonio 3</button>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -104,6 +206,27 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function toggleTranscription() {
+            let transcription = document.getElementById("transcription");
+            let button = document.querySelector(".toggle-transcription-btn");
+    
+            if (transcription.style.display === "none" || transcription.style.display === "") {
+                transcription.style.display = "block";
+                button.textContent = "Ocultar transcripción";
+            } else {
+                transcription.style.display = "none";
+                button.textContent = "Ver transcripción";
+            }
+        }
+        function changeAudio(audioSrc) {
+        let audioPlayer = document.getElementById("testimonialAudio");
+        audioPlayer.src = audioSrc;
+        audioPlayer.play();
+    }
+    </script>
+    
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
